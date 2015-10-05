@@ -30,5 +30,7 @@ RUN apt-get -y install nodejs
 # Link common name
 RUN ln -sf nodejs /usr/bin/node
 
+ENV NPM_CONFIG_CACHE /mal/.npm
 
-
+# For building modules
+RUN apt-get -y install g++
